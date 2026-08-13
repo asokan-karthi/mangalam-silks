@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="medallion" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#b3243f"/>
+      <stop offset="55%" stop-color="#8e1c30"/>
+      <stop offset="100%" stop-color="#6e1424"/>
+    </radialGradient>
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7dfa0"/>
+      <stop offset="30%" stop-color="#e9c06a"/>
+      <stop offset="55%" stop-color="#c8932f"/>
+      <stop offset="80%" stop-color="#f2d38c"/>
+      <stop offset="100%" stop-color="#d9ac4c"/>
+    </linearGradient>
+    <linearGradient id="goldLetter" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbeecb"/>
+      <stop offset="35%" stop-color="#f0c14b"/>
+      <stop offset="70%" stop-color="#d9ac4c"/>
+      <stop offset="100%" stop-color="#b8862c"/>
+    </linearGradient>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#5a0f1c" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- outer cream field -->
+  <circle cx="100" cy="100" r="98" fill="#fffaf1"/>
+
+  <!-- ornate gold ring -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="url(#goldRing)" stroke-width="5"/>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="url(#goldRing)" stroke-width="2" opacity="0.7"/>
+
+  <!-- decorative dots around the ring -->
+  <g fill="#d9ac4c">
+    <circle cx="100" cy="8" r="2.6"/>
+    <circle cx="100" cy="192" r="2.6"/>
+    <circle cx="8" cy="100" r="2.6"/>
+    <circle cx="192" cy="100" r="2.6"/>
+    <circle cx="32" cy="32" r="2"/>
+    <circle cx="168" cy="32" r="2"/>
+    <circle cx="32" cy="168" r="2"/>
+    <circle cx="168" cy="168" r="2"/>
+  </g>
+
+  <!-- inner maroon medallion -->
+  <circle cx="100" cy="100" r="74" fill="url(#medallion)" filter="url(#softShadow)"/>
+  <circle cx="100" cy="100" r="74" fill="none" stroke="url(#goldRing)" stroke-width="3.5"/>
+
+  <!-- monogram M -->
+  <text x="100" y="132" text-anchor="middle" font-family="'Playfair Display', Georgia, serif"
+        font-weight="800" font-size="92" fill="url(#goldLetter)" stroke="#7d2438" stroke-width="0.6">M</text>
+</svg>
